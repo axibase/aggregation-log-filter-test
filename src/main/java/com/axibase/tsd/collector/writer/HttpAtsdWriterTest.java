@@ -19,8 +19,6 @@ import com.axibase.tsd.collector.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.nio.ByteBuffer;
 
 import static org.junit.Assert.*;
@@ -35,12 +33,12 @@ public class HttpAtsdWriterTest {
     public void testBadAddress() throws Exception {
         HttpAtsdWriter writer = new HttpAtsdWriter();
         try {
-            writer.setUrl("http://localhost:0");
+            writer.setUrl("http:/localhost:0");
             writer.setTimeout(300);
             writer.write(ByteBuffer.wrap("test\n".getBytes(AtsdUtil.UTF_8)));
             fail();
-        } catch (IOException e) {
-            assertEquals("Can't assign requested address", e.getMessage());
+        } catch (IllegalArgumentException e) {
+            assertEquals("protocol = http host = null", e.getMessage());
             // ok
         }
     }
