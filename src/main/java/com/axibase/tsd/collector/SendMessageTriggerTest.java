@@ -19,9 +19,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * @author Nikolay Malevanny.
- */
 public class SendMessageTriggerTest {
     @Test
     public void testOnEvent() throws Exception {

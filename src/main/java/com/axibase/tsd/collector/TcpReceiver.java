@@ -26,9 +26,6 @@ import java.nio.charset.Charset;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * @author Nikolay Malevanny.
- */
 public class TcpReceiver {
     private ServerSocketChannel serverSocketChannel;
     private StringBuilder sb;

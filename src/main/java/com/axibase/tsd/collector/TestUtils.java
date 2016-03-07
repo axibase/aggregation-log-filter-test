@@ -15,9 +15,6 @@
 
 package com.axibase.tsd.collector;
 
-/**
- * @author Nikolay Malevanny.
- */
 public class TestUtils {
     public static final int TEST_TCP_PORT_LOG4J = 35771;
     public static final int TEST_TCP_PORT_LOGBACK = 35791;

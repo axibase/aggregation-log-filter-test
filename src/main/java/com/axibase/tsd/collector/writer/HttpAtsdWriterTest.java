@@ -23,9 +23,6 @@ import java.nio.ByteBuffer;
 
 import static org.junit.Assert.*;
 
-/**
- * @author Nikolay Malevanny.
- */
 public class HttpAtsdWriterTest {
     public static final long M = 1000 * 1000L;
 
